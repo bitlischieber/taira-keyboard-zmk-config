@@ -8,6 +8,32 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        kp_mo: kp_mo {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KP_MO";
+            bindings =
+                <&kp>,
+                <&mo>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <400>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <0>;
+        };
+        kp_kp: kp_kp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KP_KP";
+            bindings =
+                <&kp>,
+                <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-trigger-key-positions = <1 2 3 4 5 11 10 9 8 7>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -27,21 +53,31 @@
  */
 
             bindings = <
-       &kp ESC  &kp NUMBER_1     &kp N2    &kp N3     &kp N4         &kp N5                           &kp APOS  &kp NUMBER_9  &kp NUMBER_9   &kp NUMBER_8   &kp NUMBER_7  &kp NUMBER_6
-       &kp TAB         &kp Q      &kp W     &kp E      &kp R          &kp T                              &kp Y         &kp P         &kp O          &kp I          &kp U         &kp Z
-     &lt 4 ESC         &kp A      &kp S     &kp D      &kp F          &kp G      &kp DELETE              &kp J         &kp K         &kp L          &kp K          &kp J         &kp H                  &kp Z
-&kp LEFT_SHIFT         &kp Y      &kp X     &kp C      &kp V          &kp B      &kp INSERT    &kp RIGHT_SHIFT     &kp MINUS       &kp DOT      &kp COMMA          &kp M         &kp N  &mt RSHFT PRINTSCREEN
-     &kp LCTRL      &kp LALT  &kp LMETA  &kp LALT  &kp SPACE  &kp LESS_THAN  &kp LEFT_ARROW  &kp RIGHT_CONTROL       &kp END      &kp HOME  &kp RIGHT_ALT  &kp BACKSPACE     &kp ENTER              &kp RIGHT
+       &kp_mo ESC 2  &kp_kp NUMBER_1 F1  &kp_kp NUMBER_2 F2    &kp N3     &kp N4         &kp N5                           &kp APOS  &kp NUMBER_9  &kp NUMBER_9   &kp NUMBER_8   &kp NUMBER_7  &kp NUMBER_6
+            &kp TAB               &kp Q               &kp W     &kp E      &kp R          &kp T                              &kp Y         &kp P         &kp O          &kp I          &kp U         &kp Z
+          &lt 4 ESC               &kp A               &kp S     &kp D      &kp F          &kp G      &kp DELETE              &kp J         &kp K         &kp L          &kp K          &kp J         &kp H                  &kp Z
+&kp_mo LEFT_SHIFT 1               &kp Y               &kp X     &kp C      &kp V          &kp B      &kp INSERT    &kp RIGHT_SHIFT     &kp MINUS       &kp DOT      &kp COMMA          &kp M         &kp N  &mt RSHFT PRINTSCREEN
+          &kp LCTRL            &kp LALT           &kp LMETA  &kp LALT  &kp SPACE  &kp LESS_THAN  &kp LEFT_ARROW  &kp RIGHT_CONTROL       &kp END      &kp HOME  &kp RIGHT_ALT  &kp BACKSPACE     &kp ENTER              &kp RIGHT
             >;
         };
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans           &trans           &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans           &trans           &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans           &trans           &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &to 0  &kp KP_NUMBER_0  &kp KP_NUMBER_0  &kp KP_DOT  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_2 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans      &kp UP_ARROW          &trans  &trans  &trans  &trans  &trans           &kp DOWN
+&trans  &trans  &trans  &trans  &trans          &kp LEFT          &trans  &trans  &trans  &trans  &trans          &kp RIGHT
+&trans  &trans  &trans  &trans  &trans    &kp LEFT_BRACE  &trans  &trans  &trans  &trans  &trans  &trans    &kp RIGHT_BRACE  &trans
+&trans  &trans  &trans  &trans  &trans  &kp LEFT_BRACKET  &trans  &trans  &trans  &trans  &trans  &trans  &kp RIGHT_BRACKET  &trans
+ &to 0  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans             &trans  &trans
             >;
         };
     };
