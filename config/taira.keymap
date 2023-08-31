@@ -16,7 +16,6 @@
                 };
 
                 lower_layer {
-
                         bindings = <
 &none          &kp  F1      &kp  F2      &kp  F3     &kp  F4     &kp  F5                                                                        &kp  F6    &kp  F7    &kp  F8     &kp  F9    &kp  F10      &kp  F11
 &kp  GRAVE     &kp  N1      &kp  N2      &kp  N3     &kp  N4     &kp  N5                                                                        &kp  N6    &kp  N7    &kp  N8     &kp  N9    &kp  N0       &kp  F12
@@ -27,7 +26,6 @@
                 };
 
                 raise_layer {
-
                         bindings = <
 &none          &kp  F1      &kp  F2      &kp  F3     &kp  F4     &kp  F5                                                                        &kp  F6    &kp  F7    &kp  F8     &kp  F9    &kp  F10      &kp  F11
 &kp  GRAVE     &kp  N1      &kp  N2      &kp  N3     &kp  N4     &kp  N5                                                                        &kp  N6    &kp  N7    &kp  N8     &kp  N9    &kp  N0       &kp  F12
@@ -38,7 +36,6 @@
                 };
 
                 adjust_layer {
-
                         bindings = <
 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5                                                                          &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5
 &none        &none        &none        &none        &none        &none                                                                                 &none        &none        &none        &none        &none        &none
@@ -49,7 +46,6 @@
                 };
 
                 hyper_layer {
-
                         bindings = <
 &trans        &trans     &trans      &trans      &trans      &trans                                                                         &trans   &trans     &trans      &trans     &trans        &none
 &trans        &trans     &kp HYPR(W) &trans      &trans      &trans                                                                         &trans   &trans     &trans      &trans     &trans        &none
