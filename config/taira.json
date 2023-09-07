@@ -67,13 +67,13 @@
         { "label":    "LWR", "row": 4, "col":  4, "x":    6, "y":    4.3 },
         { "label":    "SPC", "row": 4, "col":  5, "x":    7, "y":    4.3 },
         { "label":    "SPC", "row": 4, "col":  6, "x":    8, "y":    4.3 },
-        { "label":    "RSE", "row": 4, "col":  7, "x":   10, "y":    4.3 }
+        { "label":    "RSE", "row": 4, "col":  7, "x":   10, "y":    4.3 },
         { "label":    "RSE", "row": 4, "col":  8, "x":   11, "y":    4.3 },
         { "label":    "ENT", "row": 4, "col":  9, "x":   12, "y":    4.3 },
         { "label":    "ALT", "row": 4, "col":  10, "x": 14.5, "y":    4.2 },
         { "label":    "Esc", "row": 4, "col":  11, "x":   16, "y":   4.11 },
         { "label":    "Esc", "row": 4, "col":  12, "x":   17, "y":   4.36 },
-        { "label":    "Esc", "row": 4, "col":  13, "x":   18, "y":   4.36 },
+        { "label":    "Esc", "row": 4, "col":  13, "x":   18, "y":   4.36 }
       ]
     }
   },
