@@ -53,7 +53,7 @@
  */
 
             bindings = <
-&kp_mo ESC 2         &kp_kp NUMBER_1 F1  &kp_kp NUMBER_2 F2  &kp_kp N3 F3  &kp_kp NUMBER_4 F4  &kp_kp NUMBER_5 F5                  &kp_kp NUMBER_6 F6  &kp_kp NUMBER_7 F7  &kp_kp NUMBER_8 F8  &kp_kp NUMBER_9 F9  &kp_kp NUMBER_0 F10  &kp_kp APOS F11
+       &kp_mo ESC 2  &kp_kp F1 NUMBER_1  &kp_kp F2 NUMBER_2    &kp_kp F3 NUBMER_3     &kp_kp F4 NUMBER_4        &kp_kp F5 NUMBER_5                           &kp_kp F6 NUMBER_6 &kp_kp F7 NUMBER_7  &kp_kp F8 NUMBER_8   &kp_kp F9 NUMBER_9   &kp_kp F10 NUMBER_00  &kp_kp F11 APOS
 &kp TAB              &kp Q               &kp W               &kp E         &kp R               &kp T                               &kp Z               &kp U               &kp I               &kp O               &kp P                &kp_kp LEFT_BRACE F12
 &kp CAPS             &kp A               &kp S               &kp D         &kp F               &kp G               &kp DELETE      &kp DOWN            &kp H               &kp J               &kp K               &kp L                &kp H                  &kp RIGHT_BRACE
 &kp_mo LEFT_SHIFT 1  &kp Y               &kp X               &kp C         &kp V               &kp B               &kp INSERT      &kp UP_ARROW        &kp N               &kp M               &kp COMMA           &kp DOT              &kp MINUS              &kp RIGHT_SHIFT
