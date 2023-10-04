@@ -78,7 +78,7 @@
 &kp    ESC        &kp  A           &kp  S           &kp  D           &kp  F           &kp  G                                                                                &kp  H           &kp  J           &kp  K           &kp  L          &kp  SEMI        &kp  SQT
 &kp_mo LSHFT 1    &kp  Z           &kp  X           &kp  C           &kp  V           &kp  B                     &kp  DEL    &kp  PG_DN    &kp  PG_UP  &kp  HOME            &kp  N           &kp  M           &kp  COMMA       &kp  DOT        &kp  SLASH       &mt  RSHFT ENTER
 &kp    LCTRL      &kp LALT         &kp  LMETA       &kp  LALT                                          &kp LMETA &kp  SPACE  &mo  LOWER    &mo  RAISE  &kp  BSPC &kp  RALT                                    &kp  LEFT        &kp  DOWN       &kp  UP          &kp  RIGHT
-                                >;                
+                        >;                
                 };
 
                 lower_layer {
