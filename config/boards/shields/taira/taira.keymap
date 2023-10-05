@@ -12,24 +12,11 @@
 
 #define DEFAULT 0
 #define LOWER   1
-#define RAISE   2
-#define ADJUST  3
-#define HYPER   4
-#define GAME    5
+#define MEDIA   2
+#define RAISE   3
 
-#define HYPR(KC) LC(LS(LA(LG(KC))))
 
-/ {
-
-        conditional_layers {
-                compatible = "zmk,conditional-layers";
-
-                tri_layer {
-                        if-layers  = <1 2>;
-                        then-layer = <3>;
-                };
-        };
-        
+/ {        
         behaviors {
                 kp_mo: kp_mo {
                 compatible = "zmk,behavior-hold-tap";
@@ -67,11 +54,11 @@
  * .----------------------------------------------------------------------------------------------------------------------------------.
  */
                         bindings = <
-&kp  DE_SECT   &kp_kp F1 DE_N1  &kp_kp F2 DE_N2  &kp_kp F3 DE_N3  &kp_kp F4 DE_N4  &kp_kp F5 DE_N5                                                                             &kp_kp F6 DE_N6  &kp_kp F7 DE_N7  &kp_kp F8 DE_N8  &kp_kp F9 DE_N9  &kp_kp F10 DE_N0  &kp_kp F11 DE_QMARK
-&kp  ESC       &kp  Q           &kp  W           &kp  DE_E        &kp  R           &kp  T                                                                                      &kp  DE_Z        &kp  U           &kp  I           &kp  O           &kp  P            &kp_kp F12 DE_UMLAUT
-&kp_mo TAB 2   &kp  A           &kp  S           &kp  D           &kp  F           &kp  G                                                                                      &kp  H           &kp  J           &kp  K           &kp  L           &kp  DE_A_UMLAUT  &kp  DE_DLLR
-&kp_mo LSHFT 1 &kp  DE_Y        &kp  X           &kp  C           &kp  V           &kp_kp DE_Z B              &kp  DEL    &kp  INS    &kp PG_UP   &kp_kp  PAUS PSCRN           &kp  N           &kp  M           &kp  DE_COMMA    &kp  DE_DOT      &kp  DE_MINUS     &kp  RSHFT
-&kp  LCTRL     &kp  LGUI        &kp  DE_LT       &kp  LALT                                          &kp SPACE &kp  ENTER  &kp  LOWER  &kp PG_DN   &kp  ENTER         &kp BSPC                                    &kp_kp RALT HOME &kp  END         &kp  K_APP        &kp  RCTRL
+&kp_mo  DE_SECT 2  &kp_kp F1 DE_N1  &kp_kp F2 DE_N2  &kp_kp F3 DE_N3  &kp_kp F4 DE_N4  &kp_kp F5 DE_N5                                                                             &kp_kp F6 DE_N6  &kp_kp F7 DE_N7  &kp_kp F8 DE_N8  &kp_kp F9 DE_N9  &kp_kp F10 DE_N0  &kp_kp F11 DE_QMARK
+&kp_mo  ESC 1      &kp  Q           &kp  W           &kp  DE_E        &kp  R           &kp  T                                                                                      &kp  DE_Z        &kp  U           &kp  I           &kp  O           &kp  P            &kp_kp F12 DE_UMLAUT
+&kp TAB            &kp  A           &kp  S           &kp  D           &kp  F           &kp  G                                                                                      &kp  H           &kp  J           &kp  K           &kp  L           &kp  DE_A_UMLAUT  &kp  DE_DLLR
+&kp SHFT           &kp  DE_Y        &kp  X           &kp  C           &kp  V           &kp_kp DE_Z B              &kp  DEL    &kp  INS    &kp PG_UP   &kp_kp  PAUS PSCRN           &kp  N           &kp  M           &kp  DE_COMMA    &kp  DE_DOT      &kp  DE_MINUS     &kp  RSHFT
+&kp LCTRL          &kp  LGUI        &kp  DE_LT       &kp  LALT                                          &kp SPACE &kp  ENTER  &kp  LOWER  &kp PG_DN   &kp  ENTER         &kp BSPC                                    &kp_kp RALT HOME &kp  END         &kp  K_APP        &kp  RCTRL
                         >;
                 };
 
@@ -93,10 +80,33 @@
 &none    &kp KP_NLCK  &kp KP_DIVIDE &kp KP_MULTIPLY &kp KP_MINUS  &none                                                &none        &none        &none        &none        &none   &kp DE_CARET
 &none    &kp KP_N7    &kp KP_N8     &kp KP_N9       &kp KP_PLUS   &none                                                &kp DE_LBRC  &kp DE_LBKT  &kp DE_RBKT  &kp DE_RBRC  &none   &kp DE_U_UMLAUT
 &none    &kp KP_N4    &kp KP_N5     &kp KP_N6       &kp KP_PLUS   &none                                                &kp LEFT     &kp UP       &kp DOWN     &kp RIGHT    &none   &kp DE_O_UMLAUT
-&trans   &kp KP_N1    &kp KP_N2     &kp KP_N3       &kp KP_ENTER  &none            &trans  &none  &none  &none         &none        &none        &none        &none        &none   &none
+&none    &kp KP_N1    &kp KP_N2     &kp KP_N3       &kp KP_ENTER  &none            &trans  &none  &none  &none         &none        &none        &none        &none        &none   &none
 &none    &kp KP_N0    &kp KP_N0     &kp KP_DOT                             &trans  &trans  &none  &none  &none  &none                            &none        &none        &none   &none
                         >;
                 };
+
+                media_layer {
+/* QWERTY
+ * .----------------------------------------------------------------------------------------------------------------------------------.
+ * |  `   |   1  |   2  |   3  |   4  |   5  |                                              |   6  |   7  |   8  |   9  |   0  | PScr |
+ * |-------------+------+------+------+------+------+------+-------+-+-------+-------+------+------+------+------+------+------+------|
+ * | ESC  |   Q  |   W  |   E  |   R  |   T  |                                              |   Y  |   U  |   I  |   O  |   P  |  \   |
+ * |-------------+------+------+------+------+------+------+-------+-+-------+-------+------+------+------+------+------+------+------|
+ * | Tab  |   A  |   S  |   D  |   F  |   G  |                                              |   H  |   J  |   K  |   L  |   ;  |  '   |
+ * |-------------+------+------+------+------+------+------+-------+-+-------+-------+------+------+------+------+------+------+------|
+ * | Shift|   Z  |   X  |   C  |   V  |   B  |      | Del  | PGDN  | | PGUP  | Home  |      |   N  |   M  |   ,  |   .  |   /  | Shift|
+ * |-------------+------+------+------+------+------+------+-------+-+-------+-------+------+------+------+------+------+------+------|
+ * | Ctrl | Alt  | Meta | Alt  |             | Meta | Space| Lower | | Raise | Enter | RAlt |             | LEFT | DOWN | UP   | RIGHT|
+ * .----------------------------------------------------------------------------------------------------------------------------------.
+ */
+                        bindings = <
+&none    &kp K_BACK    &kp K_PP    &kp K_FORWARD  &none    &none                                                          &none    &none    &none    &none    &none    &none
+&none    &kp K_VOL_DN  &kp K_MUTE  &kp K_VOL_UP   &none    &none                                                          &none    &none    &none    &none    &none    &none
+&none    &none         &none       &none          &none    &none                                                          &none    &none    &none    &none    &none    &none
+&none    &none         &none       &none          &none    &none             &none    &none    &none    &none             &none    &none    &none    &none    &none    &none
+&none    &none         &none       &none                            &none    &none    &none    &none    &none    &none                      &none    &none    &none    &none
+                        >;
+                }; 
 
                 raise_layer {
 /* QWERTY
@@ -114,34 +124,11 @@
  */
                         bindings = <
 &none    &none    &none    &none    &none    &none                                                          &none    &none    &none    &none    &none    &none
-&trans   &none    &none    &none    &none    &none                                                          &none    &none    &none    &none    &none    &none
+&none    &none    &none    &none    &none    &none                                                          &none    &none    &none    &none    &none    &none
 &none    &none    &none    &none    &none    &none                                                          &none    &none    &none    &none    &none    &none
 &none    &none    &none    &none    &none    &none             &none    &none    &none    &none             &none    &none    &none    &none    &none    &none
 &none    &none    &none    &none                      &none    &none    &none    &none    &none    &none                      &none    &none    &none    &none
                         >;
-                };
-
-                adjust_layer {
-/* QWERTY
- * .----------------------------------------------------------------------------------------------------------------------------------.
- * |  `   |   1  |   2  |   3  |   4  |   5  |                                              |   6  |   7  |   8  |   9  |   0  | PScr |
- * |-------------+------+------+------+------+------+------+-------+-+-------+-------+------+------+------+------+------+------+------|
- * | ESC  |   Q  |   W  |   E  |   R  |   T  |                                              |   Y  |   U  |   I  |   O  |   P  |  \   |
- * |-------------+------+------+------+------+------+------+-------+-+-------+-------+------+------+------+------+------+------+------|
- * | Tab  |   A  |   S  |   D  |   F  |   G  |                                              |   H  |   J  |   K  |   L  |   ;  |  '   |
- * |-------------+------+------+------+------+------+------+-------+-+-------+-------+------+------+------+------+------+------+------|
- * | Shift|   Z  |   X  |   C  |   V  |   B  |      | Del  | PGDN  | | PGUP  | Home  |      |   N  |   M  |   ,  |   .  |   /  | Shift|
- * |-------------+------+------+------+------+------+------+-------+-+-------+-------+------+------+------+------+------+------+------|
- * | Ctrl | Alt  | Meta | Alt  |             | Meta | Space| Lower | | Raise | Enter | RAlt |             | LEFT | DOWN | UP   | RIGHT|
- * .----------------------------------------------------------------------------------------------------------------------------------.
- */
-                        bindings = <
-&none    &kp K_BACK    &kp K_PP    &kp K_FORWARD  &none    &none                                                          &none    &none    &none    &none    &none    &none
-&trans   &kp K_VOL_DN  &kp K_MUTE  &kp K_VOL_UP   &none    &none                                                          &none    &none    &none    &none    &none    &none
-&none    &none         &none       &none          &none    &none                                                          &none    &none    &none    &none    &none    &none
-&none    &none         &none       &none          &none    &none             &none    &none    &none    &none             &none    &none    &none    &none    &none    &none
-&none    &none         &none       &none                            &none    &none    &none    &none    &none    &none                      &none    &none    &none    &none
-                        >;
-                };               
+                };              
         };
 };
