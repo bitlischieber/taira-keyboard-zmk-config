@@ -29,6 +29,25 @@
                         then-layer = <3>;
                 };
         };
+        
+        behaviors {
+                kp_mo: kp_mo {
+                compatible = "zmk,behavior-hold-tap";
+                label = "KP_MO";
+                bindings = <&kp>, <&mo>;
+                #binding-cells = <2>;
+                tapping-term-ms = <400>;
+                flavor = "tap-preferred";
+                };
+                kp_kp: kp_kp {
+                compatible = "zmk,behavior-hold-tap";
+                label = "KP_KP";
+                bindings = <&kp>, <&kp>;
+                #binding-cells = <2>;
+                tapping-term-ms = <200>;
+                flavor = "tap-preferred";
+                };
+        };
 
         keymap {
                 compatible = "zmk,keymap";
