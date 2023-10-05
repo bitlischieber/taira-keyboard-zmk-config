@@ -34,16 +34,16 @@
                 tapping-term-ms = <200>;
                 flavor = "tap-preferred";
                 };
-                td_lt0: tap_dance_mod_tap {
+                td_lt0: tap_dance_mod_tap0 {
                 compatible = "zmk,behavior-tap-dance";
-                label = "TAP_DANCE_MOD_TAP";
+                label = "TAP_DANCE_MOD_TAP0";
                 bindings = <&kp LSHFT>, <&lt 0>;
                 #binding-cells = <0>;
                 tapping-term-ms = <300>;
                 };
-                td_lt1: tap_dance_mod_tap {
+                td_lt1: tap_dance_mod_tap1 {
                 compatible = "zmk,behavior-tap-dance";
-                label = "TAP_DANCE_MOD_TAP";
+                label = "TAP_DANCE_MOD_TAP1";
                 bindings = <&kp LSHFT>, <&lt 1>;
                 #binding-cells = <0>;
                 tapping-term-ms = <300>;
