@@ -8,7 +8,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/bt.h>
-#include "keys_de_swiss.h"
 
 #define DEFAULT 0
 #define LOWER   1
@@ -20,31 +19,6 @@
 #define HYPR(KC) LC(LS(LA(LG(KC))))
 
 / {
-        behaviors {
-                kp_mo: kp_mo {
-                compatible = "zmk,behavior-hold-tap";
-                label = "KP_MO";
-                bindings =
-                        <&kp>,
-                        <&mo>;
-
-                #binding-cells = <2>;
-                tapping-term-ms = <400>;
-                flavor = "tap-preferred";
-                hold-trigger-key-positions = <0>;
-                };
-                kp_kp: kp_kp {
-                compatible = "zmk,behavior-hold-tap";
-                label = "KP_KP";
-                bindings =
-                        <&kp>,
-                        <&kp>;
-
-                #binding-cells = <2>;
-                tapping-term-ms = <200>;
-                hold-trigger-key-positions = <1 2 3 4 5 11 10 9 8 7>;
-                };
-        };
 
         conditional_layers {
                 compatible = "zmk,conditional-layers";
@@ -73,12 +47,12 @@
  * .----------------------------------------------------------------------------------------------------------------------------------.
  */
                         bindings = <
-&kp    GRAVE      &kp_kp F1 DE_N1  &kp_kp F2 DE_N2  &kp_kp F3 DE_N3  &kp_kp F4 DE_N4  &kp_kp F5 DE_N5                                                                       &kp_kp F6 DE_N6  &kp_kp F7 DE_N7  &kp_kp F8 DE_N8  &kp_kp F9 DE_9  &kp_kp 10 DE_N0  &kp_kp F11 APOS
-&kp    TAB        &kp  Q           &kp  W           &kp  E           &kp  R           &kp  T                                                                                &kp  Y           &kp  U           &kp  I           &kp  O          &kp  P           &kp  BSLH
-&kp    ESC        &kp  A           &kp  S           &kp  D           &kp  F           &kp  G                                                                                &kp  H           &kp  J           &kp  K           &kp  L          &kp  SEMI        &kp  SQT
-&kp_mo LSHFT 1    &kp  Z           &kp  X           &kp  C           &kp  V           &kp  B                     &kp  DEL    &kp  PG_DN    &kp  PG_UP  &kp  HOME            &kp  N           &kp  M           &kp  COMMA       &kp  DOT        &kp  SLASH       &mt  RSHFT ENTER
-&kp    LCTRL      &kp LALT         &kp  LMETA       &kp  LALT                                          &kp LMETA &kp  SPACE  &mo  LOWER    &mo  RAISE  &kp  BSPC &kp  RALT                                    &kp  LEFT        &kp  DOWN       &kp  UP          &kp  RIGHT
-                        >;                
+&kp  GRAVE    &kp  N1    &kp  N2     &kp  N3     &kp  N4    &kp  N5                                                                        &kp  N6  &kp  N7    &kp  N8     &kp  N9    &kp  N0       &kp  PSCRN
+&kp  TAB      &kp  Q     &kp  W      &kp  E      &kp  R     &kp  T                                                                         &kp  Y   &kp  U     &kp  I      &kp  O     &kp  P        &kp  BSLH
+&lt HYPER ESC &kp  A     &kp  S      &kp  D      &kp  F     &kp  G                                                                         &kp  H   &kp  J     &kp  K      &kp  L     &kp  SEMI     &kp  SQT
+&kp  LSHFT    &kp  Z     &kp  X      &kp  C      &kp  V     &kp  B             &kp  DEL    &kp  PG_DN    &kp  PG_UP  &kp  HOME             &kp  N   &kp  M     &kp  COMMA  &kp  DOT   &kp  SLASH    &mt  RSHFT ENTER
+&kp  LCTRL    &kp LALT   &kp  LMETA  &kp  LALT                       &kp LMETA &kp  SPACE  &mo  LOWER    &mo  RAISE  &kp  BSPC &kp  RALT                       &kp  LEFT   &kp  DOWN  &kp  UP       &kp  RIGHT
+                        >;
                 };
 
                 lower_layer {
