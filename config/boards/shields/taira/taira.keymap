@@ -31,7 +31,7 @@
 &kp TAB             &kp  Q           &kp  W           &kp  DE_E        &kp  R           &kp  T                                                                               &kp  DE_Z        &kp  U           &kp  I           &kp  O           &kp  P                &kp_kp F12 DE_UMLAUT
 &to 1               &kp  A           &kp  S           &kp  D           &kp  F           &kp  G                                                                               &kp  H           &kp  J           &kp  K           &kp  L           &kp  DE_A_UMLAUT      &kp  DE_DLLR
 &kp LSHFT           &lt  1 DE_Y      &kp  X           &kp  C           &kp  V           &kp_kp DE_Z B              &kp  DEL    &kp  INS    &kp PG_UP   &kp  PSCRN            &kp  N           &kp  M           &kp  DE_COMMA    &kp  DE_DOT      &kp  DE_MINUS         &kp  RSHFT
-&kp LCTRL           &kp  LGUI        &kp RC(RALT)     &kp  LALT                                          &kp SPACE &kp  ENTER  &kp  DE_LT  &kp PG_DN   &kp  ENTER  &kp BSPC                                    &kp_kp RALT HOME &kp  END         &kp  K_APP            &kp  RCTRL
+&kp LCTRL           &kp  LGUI        &kp RC(RALT)     &kp  LALT                                          &kp SPACE &kp  ENTER  &kp  DE_LT  &kp PG_DN   &kp  ENTER  &kp BSPC                                    &kp_kp LALT HOME &kp  END         &kp  K_APP            &kp  RCTRL
                         >;
                 };
 
