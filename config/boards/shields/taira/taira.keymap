@@ -11,13 +11,6 @@
 #include "keys_de_swiss.h"
 
 / {    
-    chosen {
-        zmk,battery = &vbatt;
-    };
-    vbatt: vbatt {
-        compatible = "zmk,battery-nrf-vddh";
-        label = "VBATT";
-    };   
     behaviors {
             kp_kp: kp_kp {
             compatible = "zmk,behavior-hold-tap";
