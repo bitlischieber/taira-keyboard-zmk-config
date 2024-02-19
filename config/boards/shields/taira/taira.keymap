@@ -27,19 +27,19 @@
 
         default_layer {
             bindings = <
-&kp_kp DE_SECT ESC  &kp_kp F1 DE_N1  &kp_kp F2 DE_N2  &kp_kp F3 DE_N3  &kp_kp F4 DE_N4  &kp_kp F5 DE_N5                                                                      &kp_kp F6 DE_N6  &kp_kp F7 DE_N7  &kp_kp F8 DE_N8      &kp_kp F9 DE_N9  &kp_kp F10 DE_N0      &kp_kp F11 DE_APOS
-&kp TAB             &kp  Q           &kp  W           &kp  DE_E        &kp  R           &kp  T                                                                               &kp  DE_Y        &kp  U           &kp  I               &kp  O           &kp  P                &kp_kp F12 DE_UMLAUT
-&to 1               &kp  A           &kp  S           &kp  D           &kp  F           &kp  G                                                                               &kp  H           &kp  J           &kp  K               &kp  L           &kp  DE_A_UMLAUT      &kp  DE_DLLR
-&kp LSHFT           &lt  1 DE_Z      &kp  X           &kp  C           &kp  V           &kp_kp DE_Z B              &kp  DEL    &kp  INS    &kp PG_UP   &kp  PSCRN            &kp  N           &kp  M           &kp  DE_COMMA        &kp  DE_DOT      &kp  DE_MINUS         &kp  RSHFT
-&kp LCTRL           &kp  RC(RALT)    &kp LGUI        &kp  LALT                                           &kp SPACE &kp  BSPC   &kp  DE_LT  &kp PG_DN   &kp  ENTER  &kp BSPC                                    &kp_kp LC(RALT) HOME &kp  END         &kp  K_APP            &kp  RCTRL
+&kp_kp DE_SECT ESC  &kp_kp F1 DE_N1  &kp_kp F2 DE_N2  &kp_kp F3 DE_N3  &kp_kp F4 DE_N4  &kp_kp F5 DE_N5                                                                      &kp_kp F6 DE_N6    &kp_kp F7 DE_N7  &kp_kp F8 DE_N8      &kp_kp F9 DE_N9  &kp_kp F10 DE_N0      &kp_kp F11 DE_APOS
+&kp TAB             &kp  Q           &kp  W           &kp  DE_E        &kp  R           &kp  T                                                                               &kp  DE_Y          &kp  U           &kp  I               &kp  O           &kp  P                &kp_kp F12 DE_UMLAUT
+&to 1               &kp  A           &kp  S           &kp  D           &kp  F           &kp_kp  DE_LBKT G                                                                    &kp_kp  DE_RBKT H  &kp  J           &kp  K               &kp  L           &kp  DE_A_UMLAUT      &kp  DE_DLLR
+&kp LSHFT           &lt  1 DE_Z      &kp  X           &kp  C           &kp  V           &kp_kp  DE_LBRC B          &kp  DEL    &kp  INS    &kp PG_UP   &kp  PSCRN            &kp_kp  DE_RBRC N  &kp  M           &kp  DE_COMMA        &kp  DE_DOT      &kp  DE_MINUS         &kp  RSHFT
+&kp LCTRL           &kp  RC(RALT)    &kp LGUI        &kp  LALT                                           &kp SPACE &kp  BSPC   &kp  DE_LT  &kp PG_DN   &kp  ENTER  &kp BSPC                                      &kp_kp LC(RALT) HOME &kp  END         &kp  K_APP            &kp  RCTRL
                         >;
                 };
 
         lower_layer {
                 bindings = <
 &to 0      &none      &kp KP_NLCK  &kp KP_DIVIDE &kp KP_MULTIPLY &kp KP_MINUS                                                                         &kp DE_LBRC  &kp DE_RBRC  &kp DE_LBKT  &kp DE_RBKT  &none  &kp DE_CARET
-&trans     &none      &kp KP_N7    &kp KP_N8     &kp KP_N9       &kp KP_PLUS                                                                          &none        &kp UP       &none        &none        &none  &kp DE_U_UMLAUT
-&to 2      &none      &kp KP_N4    &kp KP_N5     &kp KP_N6       &kp KP_PLUS                                                                          &kp LEFT     &kp DOWN     &kp RIGHT    &none        &none  &kp DE_O_UMLAUT
+&trans     &none      &kp KP_N7    &kp KP_N8     &kp KP_N9       &kp KP_PLUS                                                                          &none        &none        &kp UP       &none        &none  &kp DE_U_UMLAUT
+&to 2      &none      &kp KP_N4    &kp KP_N5     &kp KP_N6       &kp KP_PLUS                                                                          &none        &kp LEFT     &kp DOWN     &kp RIGHT    &none  &kp DE_O_UMLAUT
 &trans     &none      &kp KP_N1    &kp KP_N2     &kp KP_N3       &kp KP_ENTER              &trans  &trans &kp SLCK &kp PAUSE_BREAK                    &none        &none        &none        &none        &none  &none
 &trans     &none      &kp KP_N0    &kp KP_DOT                                      &trans  &trans  &trans &none    &trans            &trans                                     &trans       &trans       &none  &trans
                         >;
