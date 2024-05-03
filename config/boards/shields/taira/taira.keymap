@@ -60,8 +60,8 @@
 &none    &none    &none       &none          &none      &none                                                             &none        &none        &none        &none        &none        &none
 &none    &none    &none       &kp UP         &kp DEL    &kp BSPC                                                          &none        &none        &none        &none        &none        &none
 &none    &trans   &kp LEFT    &kp DOWN       &kp RIGHT  &none                                                             &none        &none        &none        &none        &none        &none
-&trans   &none    &kp HOME    &kp END        &none      &kp ENTER            &trans    &none    &none    &none            &none        &none        &none        &none        &none        &none
-&trans   &trans   &trans      &trans                               &trans    &trans    &none    &none    &none    &none                             &none        &none        &none        &none
+&trans   &none    &kp HOME    &kp END        &kp SPACE  &kp ENTER            &trans    &none    &none    &none            &none        &none        &none        &none        &none        &none
+&trans   &trans   &trans      &trans                               &kp LCTRL &kp LSHFT &none    &none    &none    &none                             &none        &none        &none        &none
                         >;
                 };
         };
